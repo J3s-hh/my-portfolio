@@ -3,54 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jesh Santeo - Portfolio</title>
+  <meta name="description" content="Jesh Santeo - Game Developer & Cybersecurity Enthusiast" />
+  <title>Jesh Santeo | Game Dev & Security</title>
   <style>
+    :root {
+      --bg: #0f172a;
+      --text: #f8fafc;
+      --primary: #7dd3fc;
+      --secondary: #38bdf8;
+      --muted: #94a3b8;
+    }
+
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2') format('woff2');
+    }
+
     body {
-      background-color: #0f172a;
-      color: #f8fafc;
-      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      margin: 0;
       padding: 2rem;
-      text-align: center;
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
     }
+
+    main {
+      max-width: 600px;
+      padding: 0 1.5rem;
+    }
+
     h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1.2;
     }
+
     p {
-      max-width: 600px;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
     }
+
     strong {
-      color: #38bdf8;
+      color: var(--primary);
+      font-weight: 600;
     }
-    .note {
+
+    .links {
+      display: flex;
+      gap: 1.5rem;
       margin-top: 2rem;
-      font-size: 0.9rem;
-      color: #94a3b8;
+      justify-content: center;
+    }
+
+    .links a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .links a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    .note {
+      margin-top: 3rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(148, 163, 184, 0.2);
+      padding-top: 1rem;
+      max-width: 600px;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Hey, I'm Jesh</h1>
-  <p>
-    I'm just a regular teenager trying to figure stuff out. Right now, I'm into making games — I go by <strong>Dwata Studio</strong> when I build them. I like messing around with ideas, making weird or fun things, and just seeing what works.
-  </p>
-  <p>
-    I'm also really into cybersecurity. Hacking stuff (ethically) and learning how computers work behind the scenes is super interesting to me. Someday, I wanna go pro in that space too.
-  </p>
-  <p>
-    I'm not perfect. Still learning, still failing, still improving. But that's the whole point, right?
-  </p>
+  <main>
+    <h1>Hey, I'm Jesh</h1>
+    <p>
+      I'm just a regular teenager trying to figure stuff out. Right now, I'm into making games — I go by <strong>Dwata Studio</strong> when I build them. I like messing around with ideas, making weird or fun things, and just seeing what works.
+    </p>
+    <p>
+      I'm also really into cybersecurity. Hacking stuff (ethically) and learning how computers work behind the scenes is super interesting to me. Someday, I wanna go pro in that space too.
+    </p>
+    <p>
+      I'm not perfect. Still learning, still failing, still improving. But that's the whole point, right?
+    </p>
+
+    <div class="links">
+      <a href="https://github.com/J3s-hh">GitHub</a>
+      <a href="https://bnibiningdwata.itch.io">Dwata Studio</a>
+    </div>
+  </main>
 
   <div class="note">
-    This site’s still a work in progress — I know it looks kinda basic right now 😅
+    This site's still a work in progress — simple but made with care ✨
   </div>
 </body>
 </html>
