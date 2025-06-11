@@ -137,6 +137,16 @@
     .project-info a:hover {
       text-decoration: underline;
     }
+
+    .visitor-counter {
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+    }
   </style>
 </head>
 <body>
@@ -160,8 +170,7 @@
     <h2>Projects</h2>
     
     <div class="project">
-     <img src="https://raw.githubusercontent.com/J3s-hh/my-portfolio/main/Image/Screenshot%202025-06-10%20202116.png" alt="NGL Spammer Screenshot" />
-
+      <img src="https://raw.githubusercontent.com/J3s-hh/my-portfolio/main/Image/Screenshot%202025-06-10%20202116.png" alt="NGL Spammer Screenshot" />
       <div class="project-info">
         <h3>NGL Spammer (Batch Script)</h3>
         <p>
@@ -179,6 +188,10 @@
 
   <div class="note">
     This site's still a work in progress — simple but made with care ✨
+  </div>
+
+  <div class="visitor-counter">
+    Visitors: <img id="visitor-count" src="" alt="Visitor Count">
   </div>
 
   <script>
@@ -224,6 +237,16 @@
       type();
       document.querySelector('.typewriter h1').style.borderRight = 'none';
     }, 1500);
+
+    // Visitor counter code
+    const counterUrl = "https://vercel.com/j3s-hhs-projects/my-portfolio";
+
+    if (!localStorage.getItem("visited")) {
+      document.getElementById("visitor-count").src = counterUrl + "&increment";
+      localStorage.setItem("visited", "true");
+    } else {
+      document.getElementById("visitor-count").src = counterUrl;
+    }
   </script>
 </body>
 </html>
